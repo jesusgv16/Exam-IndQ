@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Lista de eventos</h2>
+
+{% if eventos %}
+<table>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Titulo</th>
+			<th>Descripcion</th>
+			<th>Fecha</th>
+			<th>Participantes</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for event in eventos %}
+			<tr>
+				<td>{{ event.id }}</td>
+				<td>{{ event.title }}</td>
+				<td>{{ event.description }}</td>
+				<td>{{ event.date }}</td>
+				<td>{{ event.attendance }}</td>
+			</tr>						
+		{% endfor %}
+	</tbody>
+</table>	
+{% else %}
+	<h3>no existen eventos</h3>
+{% endif %}
+
+<hr/>
+<a href="/home"> Inicio. </a>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Welcome, {{ user.first_name }} {{ user.last_name }}!</h2>
+  <p>Your email address: {{ user.email }}</p>
+  <hr/>
+<a href="/events"> Ir a la seccion de eventos. </a>
+  <hr/>
+<a href="/logout"> Cerrar sesion</a>
+{% endblock %}

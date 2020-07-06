@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>IndQ Events</h2>
+<h3>Agregar evento</h3>
+<form method="POST">
+    {{events_form.as_p}}
+    {% csrf_token %}
+    <button type="Submit">Registrar</button>
+    <button><a href="/home">Cancelar</button>
+
+</form>
+<hr/>
+{% endblock %}
